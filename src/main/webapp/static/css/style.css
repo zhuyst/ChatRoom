@@ -1,0 +1,47 @@
+*{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+div.main{
+    padding: 3%;
+}
+div.login-panel{
+    text-align: center;
+    margin-top: 70px;
+    padding: 20px;
+    background-color: #ffffff;
+
+    border-radius: 10px;
+    border: 1px solid #2a5d84;
+    border-right: 4px solid #2a5d84;
+    border-bottom: 4px solid #2a5d84;
+}
+label{
+    text-align: left;
+}
+#output{
+    overflow-y:scroll;
+    background-color: #fff;
+    word-wrap: break-word;
+    word-break: normal;
+}
+#send-panel{
+    position: fixed;
+    bottom: 5px;
+    left: 1%;
+    padding-top: 1%;
+}
+.bolder{
+    font-weight: bolder;
+}
+#main-message{
+    overflow-y: scroll;
+    word-wrap: break-word;
+    word-break: normal;
+}

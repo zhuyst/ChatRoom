@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="indi.zhuyst.chatroom.dao.MessageDao">
+  <resultMap id="BaseResultMap" type="indi.zhuyst.chatroom.pojo.Message">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <constructor>
+      <idArg column="id" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="uid" javaType="java.lang.Integer" jdbcType="INTEGER" />
+      <arg column="message" javaType="java.lang.String" jdbcType="VARCHAR" />
+      <arg column="date" javaType="java.util.Date" jdbcType="TIMESTAMP" />
+    </constructor>
+  </resultMap>
+  <select id="listByCondition" resultType="indi.zhuyst.chatroom.pojo.Message" >
+    SELECT *
+    FROM message
+    ORDER BY date DESC
+    LIMIT #{limit}
+  </select>
+</mapper>
