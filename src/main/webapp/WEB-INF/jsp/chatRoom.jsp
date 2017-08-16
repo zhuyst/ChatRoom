@@ -15,9 +15,8 @@
     <script src="${pageContext.request.contextPath}/static/js/scrollheight.js"></script>
     <script>
         $(document).ready(function () {
+            resize();
             setMainMessagePanelHeight();
-            setSendPanelHeight();
-            setMessagePanelHeight();
 
             connect("ws://" + "${url}" + "websocket/chatRoom");
 
@@ -51,7 +50,7 @@
         }
     </style>
 </head>
-<body>
+<body onresize="resize()">
 <div class="main" style="padding-top: 1%">
     <div class="well well-sm  bolder text-center col-sm-12 col-lg-6 col-lg-offset-3" id="main-message">
         <p>1</p>
@@ -60,7 +59,7 @@
     <div class="col-sm-12" id="output"></div>
     <div class="col-sm-12" id="send-panel">
         <form class="form-inline" role="form">
-            <div class="form-group col-sm-9 col-lg-5 col-lg-offset-3" id="message-panel">
+            <div class="form-group col-sm-9 col-lg-4 col-lg-offset-3" id="message-panel">
                 <textarea id="message" class="input-lg form-control" rows="3" placeholder="请输入内容..." style="width: 100%"></textarea>
                 <div class="col-sm-12" style="margin-top: 10px">
                     <p class="col-sm-6 text-left text-danger" id="alert"></p>
@@ -68,8 +67,8 @@
                     <p class="col-sm-12 text-right text-muted">Ctrl + Enter键进行换行</p>
                 </div>
             </div>
-            <div class="form-group col-sm-3 col-lg-1">
-                <button class="btn btn-primary" id="send-button" type="button" style="width: 100%" onclick="doSend()">发送信息</button>
+            <div class="form-group col-sm-3 col-lg-2">
+                <button class="btn btn-primary" id="send-button" type="button" onclick="doSend()">发送信息</button>
             </div>
         </form>
     </div>

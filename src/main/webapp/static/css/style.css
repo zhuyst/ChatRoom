@@ -45,3 +45,8 @@ label{
     word-wrap: break-word;
     word-break: normal;
 }
+#send-button{
+    width: 100%;
+    font-size: 20px;
+    font-weight: bolder;
+}
